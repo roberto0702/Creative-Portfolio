@@ -136,7 +136,7 @@ h1, h2 {
 
   @media (max-width: 768px) {
     .about-body {
-      font-family: "Bungee Spice", sans-serif; /* Check if this is overriding the Google Font */
+      font-family: "Bungee Spice", Arial, Helvetica, sans-serif; /* Check if this is overriding the Google Font */
     }
   }
   
