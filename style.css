@@ -125,8 +125,6 @@ h1, h2 {
   .about-body {
     font-size: 40px;
     font-family: "Aldrich", sans-serif; 
-
-    font-style: normal;
     /*line-height: 1.8; /* Adds space between lines for readability */
     margin-top: 20px;
     display: flex;
