@@ -133,6 +133,12 @@ h1, h2 {
     max-width: 600px; /* Limits the width for better readability */
     margin: 0 auto; /* Centers the text block */
   }
+
+  @media (max-width: 768px) {
+    .about-body {
+      font-family: "Bungee Spice", sans-serif; /* Check if this is overriding the Google Font */
+    }
+  }
   
   .about-me {
   color: rgb(37, 80, 235);
