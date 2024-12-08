@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Archivo+Black&family=Bungee+Spice&family=Encode+Sans+SC:wght@100..900&family=Nabla:EDPT,EHLT@165,24&family=Oswald:wght@200..700&family=REM:ital,wght@0,100..900;1,100..900&family=Sigmar+One&family=Sixtyfour+Convergence&family=Spicy+Rice&display=swap" rel="stylesheet">
+
+  <title>Creative Portfolio</title>
+
+</head>
+
+<body>
+
+<canvas id="jello-bg"></canvas>
+
+<div class="portfolio">
+    <div class="header-container">
+        <h1 class="left-header">Roberto Hernandez</h1>
+        <h1 class="right-header">Portfolio | 2024</h1>
+      </div>
+      
+
+  <!-- About Me Section -->
+  <div class="section">
+    <p class="about-body">
+      creative designer based in San Jose, California
+    </p>
+    <p class="about-me">
+      
+Roberto Hernandez is a creative designer, specializing in brand identity and digital experience design. With a background in graphic design, advertising and coding, my work explores themes of memory, identity, and technology as I continue to push boundaries in the creative space. I’m passionate about storytelling, typography, developing interactive and conceptual websites. I blend art and technology to craft immersive digital experiences. I aim to connect people through my storytelling and visuals.
+
+    </p>
+
+  </div>
+  <!-- Images Art-->
+  <div class="image-section">
+    <img src="creative1.png" alt="Image Description" class="image">
+    <p class="caption"> 01 Curious</p>
+
+    <img src="creative2.png" alt="Image Description" class="image">
+    <p class="caption"> 02 Innovative</p>
+
+    <img src="creative3.png" alt="Image Description" class="image">
+    <p class="caption"> 03 Visionary</p>
+
+    <img src="creative4.png" alt="Image Description" class="image">
+    <p class="caption"> 04 Adaptable</p>
+  </div>
+
+
+  <!-- Links to Projects -->
+  <div class="links section">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="https://www.behance.net/robertohernand104" target="_blank">Design Inspiration</a></li>
+      <li><a href="https://roberto0702.github.io/Websites/" target="_blank">Creative Experiments</a></li>
+      <li><a href="https://roberto0702.github.io/RobertoHernandez-portfolio/" target="_blank">Portfolio Showcase</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+
+  <!-- Social Links -->
+
+  <div class="get-in-touch">
+    <h2>Get in Touch</h2>
+</div>
+
+  <div class="socials">
+    <a href="mailto:rhernandez17234@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/robertohernandez02" target="_blank">LinkedIn</a>
+    <a href="https://payhip.com/BobbyDesigns" target="_blank">Bobby Designs</a>
+  </div>
+</div>
+
+</div>
+
+<!-- Three.js Jello Effect -->
+<script type="module">
+  import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.module.js';
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 5;
+
+  const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("#jello-bg"), alpha: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  const geometry = new THREE.PlaneGeometry(10, 10, 40, 40);
+  const material = new THREE.MeshStandardMaterial({
+    color: 0x3399ff,
+    wireframe: true,
+  });
+
+  const mesh = new THREE.Mesh(geometry, material);
+  scene.add(mesh);
+
+  const light = new THREE.PointLight(0xffffff, 1);
+  light.position.set(0, 0, 5);
+  scene.add(light);
+
+  function animate() {
+    requestAnimationFrame(animate);
+    const time = performance.now() * 0.001;
+
+    const position = geometry.attributes.position;
+    for (let i = 0; i < position.count; i++) {
+      const x = position.getX(i);
+      const y = position.getY(i);
+      const waveX = 0.5 * Math.sin(x + time);
+      const waveY = 0.5 * Math.sin(y + time);
+      position.setZ(i, waveX + waveY);
+    }
+
+    position.needsUpdate = true;
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
+  window.addEventListener("resize", () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+</script>
+
+</body>
+</html>

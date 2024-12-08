@@ -1,0 +1,174 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Aldrich", sans-serif; 
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.portfolio {
+  padding: 50px;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Ensures the headers are spaced apart */
+    align-items: center; /* Aligns the headers vertically */
+    padding: 10px;
+    color: black;
+    
+  }
+  
+  .left-header, .right-header {
+    margin: 0; /* Removes default margins for precise alignment */
+    font-size: 22px;
+  }
+
+.section a:hover {
+    color: #f1c40f; /* A bright color when hovering */
+  }
+
+.section {
+    padding: 20px;
+    color:black;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.project img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  display: block;
+}
+
+.links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.links li {
+  margin: 10px 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: rgb(6, 126, 167);
+  font-size: 30px;
+}
+
+.socials {
+    margin-top: 10px;
+  }
+  
+  .socials a {
+    color:black;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+.socials a:hover {
+    color: #f1c40f; /* A bright color when hovering */
+  }
+
+
+
+ /* Styling for the Get in Touch section */
+.get-in-touch {
+    color:black;
+    padding: 20px;
+    text-align: center;
+  }
+  .get-in-touch h2 {
+    margin-bottom: 10px;
+  }
+  
+
+
+  
+  .about-body {
+    font-size: 40px;
+    font-family: "Bungee Spice", sans-serif;
+    /*line-height: 1.8; /* Adds space between lines for readability */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     /* Ensures the text is spread out evenly */
+    max-width: 600px; /* Limits the width for better readability */
+    margin: 0 auto; /* Centers the text block */
+  }
+  
+  .about-me {
+  color: rgb(37, 80, 235);
+  padding: 30px;
+  max-width: 2000px;
+  line-height: 2;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: "Aldrich", sans-serif;  
+}
+
+
+  .image-section {
+    text-align: center; /* Centers the image and caption */
+    margin: 5px; /* Adds space around the image section */
+  }
+  
+  .image {
+    width: 100%; /* Makes the image responsive */
+    max-width: 600px; /* Limits the width of the image */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Adds rounded corners to the image */
+  }
+  
+  .caption {
+    font-size: 40px;
+    color:black; /* Slightly lighter text color for the caption */
+     margin: 40px;/* Adds space between the image and the caption */
+    font-style:normal /* Makes the caption text italic */
+  }
+  
+
+
+  /* This wraps your page content */
+.content {
+    flex: 1; /* Takes up available space, pushing the footer down */
+    padding: 20px;
+  }
+  
