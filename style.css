@@ -144,6 +144,18 @@ h1, h2 {
   font-family: "Aldrich", sans-serif;  
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Smaller text on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px; /* Even smaller text on very small screens */
+  }
+}
+
 
   .image-section {
     text-align: center; /* Centers the image and caption */
