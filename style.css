@@ -130,10 +130,10 @@ h1, h2 {
   
 
 
-  
+  /* Header*/
   .about-body {
     font-size: 40px;
-    font-family: "Bungee Spice", sans-serif;
+    font-family: "Bungee Spice",Arial, Helvetica, sans-serif;
     /*line-height: 1.8; /* Adds space between lines for readability */
     margin-top: 20px;
     display: flex;
