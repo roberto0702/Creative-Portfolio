@@ -124,7 +124,7 @@ h1, h2 {
   /* Header*/
   .about-body {
     font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-style: normal;
     /*line-height: 1.8; /* Adds space between lines for readability */
     margin-top: 20px;
@@ -134,12 +134,6 @@ h1, h2 {
      /* Ensures the text is spread out evenly */
     max-width: 600px; /* Limits the width for better readability */
     margin: 0 auto; /* Centers the text block */
-  }
-
-  @media (max-width: 768px) {
-    .about-body {
-      font-family:  Arial, Helvetica, sans-serif; /* Check if this is overriding the Google Font */
-    }
   }
   
   .about-me {
