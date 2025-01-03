@@ -140,7 +140,7 @@ h1, h2 {
   padding: 30px;
   max-width: 2000px;
   line-height: 2;
-  font-size: clamp(18px, 5vw, 24px);
+  font-size: clamp(20px, 5vw, 24px);
   text-align: center;
   font-family: "Aldrich", sans-serif;  
 }
